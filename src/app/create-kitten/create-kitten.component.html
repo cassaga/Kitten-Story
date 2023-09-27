@@ -1,0 +1,20 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+      <h3>Enregister un nouveau chaton</h3>
+    <label for="name">Nom</label>
+    <input type="text" id="name" formControlName="name" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="breed">Race</label>
+    <input type="text" id="breed" formControlName="breed" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="birthDate">Date de Naissance</label>
+    <input type="date" id="birthDate" formControlName="birthDate" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="imageUrl">URL de l'Image</label>
+    <input type="text" id="imageUrl" formControlName="imageUrl" class="form-control" required>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Ajouter le Chaton  </button>
+</form>
